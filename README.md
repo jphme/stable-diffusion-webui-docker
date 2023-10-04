@@ -2,11 +2,41 @@
 
 ```bash
 
-docker compose --profile auto up --build
+docker compose --profile auto up 
+--build
 
 ssh -p 24 -L 7860:127.0.0.1:7860 -N jp@aiserver.jph.me
 ```
 
+Settings
+
+Model: V1.5 pruned
+Sampling Methood: Euler a
+Sampling Steps 20
+Hires, fix: Denoising strength: 0.6
+Upscale by 2
+Cfg Scale 7.5
+
+Controlnet:
+
+Enable
+Control Typ all
+Preprocessor None
+Model control... qrcode_monster
+balanced
+Control Weight 0.6
+
+Example Prompt additions:
+
+positive:
+
+(best quality:1.2),(masterpiece:1.2),(realistic:1.1),(detailed:1.33),(high-contrast)(deep-shadows),(sharp-focus:1.5),RAW photograph,(ultrarealistic) 32k
+
+Negative:
+
+obstructed view,artificial, uncanny, plain background, boring, plain, standard, homogenous, uncreative, unattractive, opaque, grayscale, monochrome, distorted details, low details, grains, grainy, blurry, portrait, oversaturated, low contrast, underexposed, overexposed, low-res, low quality, close-up, multiple views, multiple angles
+
+https://twitter.com/dreamingtulpa/status/1705220398239920302
 
 
 

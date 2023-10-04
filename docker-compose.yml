@@ -6,7 +6,7 @@ x-base_service: &base_service
     volumes:
       - &v1 /home/jp/models/stable-diffusion-webui/data:/data
       - &v2 /home/jp/models/stable-diffusion-webui/output:/output
-      - /home/jp/models/stable-diffusion-webui/extensions:/stable-diffusion-webui/extensions
+      #- /home/jp/models/stable-diffusion-webui/extensions:/stable-diffusion-webui/extensions
     stop_signal: SIGKILL
     tty: true
     deploy:
