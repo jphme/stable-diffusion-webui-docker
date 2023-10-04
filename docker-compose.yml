@@ -4,8 +4,8 @@ x-base_service: &base_service
     ports:
       - "${WEBUI_PORT:-7860}:7860"
     volumes:
-      - &v1 ./data:/data
-      - &v2 ./output:/output
+      - &v1 /home/jp/models/stable-diffusion-webui/data:/data
+      - &v2 /home/jp/models/stable-diffusion-webui/output:/output
     stop_signal: SIGKILL
     tty: true
     deploy:
