@@ -1,3 +1,15 @@
+# Custom Instructions
+
+```bash
+
+docker compose --profile auto up --build
+
+ssh -p 24 -L 7860:127.0.0.1:7860 -N jp@aiserver.jph.me
+```
+
+
+
+
 # Stable Diffusion WebUI Docker
 
 Run Stable Diffusion on your machine with a nice UI without any hassle!
